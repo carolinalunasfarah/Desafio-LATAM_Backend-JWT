@@ -22,6 +22,9 @@ export const displayUser = async (email) => {
     };
     try {
         const response = await pool.query(SQLquery);
+        if (response.rows.length === 0) {
+            return null;
+        }
         return response.rows;
     } catch (error) {
         throw new Error("Error finding this user: " + error.message);

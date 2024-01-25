@@ -1,15 +1,14 @@
-import { errorFinder } from "../src/api/v1/utils/utils";
+import "dotenv/config";
 import jwt from "jsonwebtoken";
 
-export const isLogin = async (req, res, next) => {
+export const verifyToken = async (req, res, next) => {
     try {
-        validateHeaders(req, res);
+        verifyHeader(req, res);
         const token = req.header("Authorization").split(" ")[1];
         const tokenData = await validateToken(token);
         req.user = tokenData;
         next();
     } catch (error) {
-        console.log(error);
         const errorFound = errorFinder(error.code);
         return res
             .status(errorFound[0]?.status)
@@ -22,12 +21,18 @@ const validateToken = async (token) => {
         const decoded = jwt.verify(token, process.env.JWT_SECRET);
         return decoded;
     } catch (error) {
-        throw new Error("Invalid token: " + error.message);
+        const errorFound = errorFinder("auth_03");
+        return res
+            .status(errorFound[0].status)
+            .json({ error: errorFound[0].message });
     }
 };
 
-const validateHeaders = (req) => {
+const verifyHeader = (req) => {
     if (!req.header("Authorization")) {
-        throw new Error("Token not found: " + error.message);
+        const errorFound = errorFinder("auth_04");
+        return res
+            .status(errorFound[0].status)
+            .json({ error: errorFound[0].message });
     }
 };

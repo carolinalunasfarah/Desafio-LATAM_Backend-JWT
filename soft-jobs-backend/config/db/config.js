@@ -7,6 +7,7 @@ export const db = {
     host: process.env.DB_HOST,
     database: process.env.DB_DATABASE,
     port: process.env.DB_PORT,
+    secret: process.env.JWT_SECRET,
     allowExitOnIdle: true,
 };
 

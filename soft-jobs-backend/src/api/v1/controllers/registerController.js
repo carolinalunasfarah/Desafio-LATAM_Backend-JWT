@@ -4,8 +4,8 @@ import { errorFinder } from "../utils/utils.js";
 export const registerUser = async (req, res) => {
     try {
         const { email, password, role, lenguage } = req.body;
-        const newUser = await createUser(email, password, role, lenguage);
-        res.status(201).json(`${{ user: newUser.email }} created successfully`);
+        await createUser(email, password, role, lenguage);
+        res.status(201).json("User created successfully");
     } catch (error) {
         console.log(error);
         const errorFound = errorFinder(error.code);

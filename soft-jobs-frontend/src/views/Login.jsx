@@ -18,17 +18,17 @@ const Login = () => {
     event.preventDefault()
 
     if (!user.email.trim() || !user.password.trim()) {
-      return window.alert('Email y password obligatorias.')
+      return window.alert('Email and password are required.')
     }
 
     if (!emailRegex.test(user.email)) {
-      return window.alert('El formato del email no es correcto!')
+      return window.alert('Email format is not correct!')
     }
 
     axios.post(ENDPOINT.login, user)
       .then(({ data }) => {
         window.sessionStorage.setItem('token', data.token)
-        window.alert('Usuario identificado con éxito 😀.')
+        window.alert('User identified successfully 😀.')
         setDeveloper({})
         navigate('/profile')
       })
