@@ -1,6 +1,7 @@
 import { displayUser } from "../models/registerModel.js";
 import { errorFinder } from "../utils/utils.js";
 import bcrypt from "bcryptjs";
+import jwt from "jsonwebtoken";
 
 export const userLogIn = async (req, res) => {
     const { email, password } = req.body;
