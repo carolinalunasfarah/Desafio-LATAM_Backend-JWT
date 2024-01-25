@@ -28,7 +28,7 @@ const Profile = () => {
         Welcome <span className='fw-bold'>{getDeveloper?.email}</span>
       </h1>
       <h3>
-        {getDeveloper?.role} In {getDeveloper?.lenguage}
+        {getDeveloper?.rol} in {getDeveloper?.lenguage}
       </h3>
     </div>
   )

@@ -24,8 +24,8 @@ const Navigation = () => {
 
     return (
       <>
-        <Link to='/profile' className='btn m-1 btn-light'>Mi Profile</Link>
-        <button onClick={logout} className='btn btn-danger'>Log Out</button>
+        <Link to='/profile' className='btn m-1 btn-light'>Profile</Link>
+        <button onClick={logout} className='btn btn-danger'>Log out</button>
       </>
     )
   }

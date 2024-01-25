@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 import { PORT } from "./config/db/config.js";
-import router from "./config/routes/softJobsRoutes.js";
+import router from "./config/routes/registerRoutes.js";
 import { logger } from "logger-express";
 
 const app = express();

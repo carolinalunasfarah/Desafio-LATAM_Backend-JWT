@@ -26,7 +26,8 @@ const Home = () => {
         Welcome to <span className='fw-bold'>Soft Jobs</span>
       </h1>
       <h4>
-        The place were all Juniors Developer <br /> could get experience
+        The place where all Juniors Developers <br /> could get
+        experience
       </h4>
     </div>
   )

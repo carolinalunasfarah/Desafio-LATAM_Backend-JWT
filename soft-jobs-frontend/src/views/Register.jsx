@@ -8,7 +8,7 @@ const initialForm = {
   email: 'docente@desafiolatam.com',
   password: '123456',
   role: 'Select a role',
-  lenguage: 'Seleccione un Lenguage'
+  lenguage: 'Select a lenguage'
 }
 
 const Register = () => {
@@ -23,19 +23,19 @@ const Register = () => {
     if (
       !user.email.trim() ||
       !user.password.trim() ||
-      user.role === 'Select a role' ||
-      user.lenguage === 'Select a Lenguage'
+      user.rol === 'Select a role' ||
+      user.lenguage === 'Select a lenguage'
     ) {
-      return window.alert('All fields are required.')
+      return window.alert('All field are required.')
     }
 
     if (!emailRegex.test(user.email)) {
-      return window.alert('Email format is not correct')
+      return window.alert('Email format is not correct!')
     }
 
     axios.post(ENDPOINT.users, user)
       .then(() => {
-        window.alert('User register successfully 😀.')
+        window.alert('User registered successfully 😀.')
         navigate('/login')
       })
       .catch(({ response: { data } }) => {
@@ -46,7 +46,7 @@ const Register = () => {
 
   useEffect(() => {
     if (window.sessionStorage.getItem('token')) {
-      navigate('/perfil')
+      navigate('/profile')
     }
   }, [])
 
@@ -98,7 +98,7 @@ const Register = () => {
           name='lenguage'
           className='form-select'
         >
-          <option disabled>Select a Lenguage</option>
+          <option disabled>Select a lenguage</option>
           <option value='JavaScript'>JavaScript</option>
           <option value='Python'>Python</option>
           <option value='Ruby'>Ruby</option>

@@ -30,7 +30,7 @@ const Login = () => {
         window.sessionStorage.setItem('token', data.token)
         window.alert('Usuario identificado con éxito 😀.')
         setDeveloper({})
-        navigate('/perfil')
+        navigate('/profile')
       })
       .catch(({ response: { data } }) => {
         console.error(data)
@@ -40,7 +40,7 @@ const Login = () => {
 
   return (
     <form onSubmit={handleForm} className='col-10 col-sm-6 col-md-3 m-auto mt-5'>
-      <h1>Iniciar Sesión</h1>
+      <h1>Log in</h1>
       <hr />
       <div className='form-group mt-1 '>
         <label>Email address</label>
@@ -64,7 +64,7 @@ const Login = () => {
           placeholder='Password'
         />
       </div>
-      <button type='submit' className='btn btn-light mt-3'>Log In</button>
+      <button type='submit' className='btn btn-light mt-3'>Sign in</button>
     </form>
   )
 }
