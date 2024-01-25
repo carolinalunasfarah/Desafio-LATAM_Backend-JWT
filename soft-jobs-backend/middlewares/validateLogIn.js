@@ -1,19 +1,9 @@
 export const validateLogIn = (req, res, next) => {
     const { email, password } = req.body;
-    const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
-    if (!email || !emailRegex.test(email)) {
-        return res
-            .status(400)
-            .json({ message: "You need to enter a valid email" });
-    }
-    
-    const passwordRegex = /^.{4,}$/;
-    if (!password || !passwordRegex.test(password)) {
+    if (!email || !password) {
         return res.status(400).json({
-            message: "The password must be at least 4 characters long",
+            message: "All fields required",
         });
     }
     next();
-
-    console.log(email, password)
 };

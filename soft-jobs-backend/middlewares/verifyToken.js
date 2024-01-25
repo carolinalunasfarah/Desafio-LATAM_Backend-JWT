@@ -1,5 +1,6 @@
 import "dotenv/config";
 import jwt from "jsonwebtoken";
+import { errorFinder } from "../src/api/v1/utils/utils.js";
 
 export const verifyToken = async (req, res, next) => {
     try {
