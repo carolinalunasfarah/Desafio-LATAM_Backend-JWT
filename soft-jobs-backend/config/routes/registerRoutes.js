@@ -8,7 +8,7 @@ import { verifyToken } from "../../middlewares/verifyToken.js";
 
 const router = Router();
 
-// POST register new user and GET
+// POST register new user and GET by email
 router
     .route("/users")
     .post(validateRegister, registerUser)

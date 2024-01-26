@@ -21,7 +21,6 @@ const Register = () => {
 
     const handleForm = (event) => {
         event.preventDefault();
-
         if (
             !user.email.trim() ||
             !user.password.trim() ||

@@ -19,7 +19,7 @@ export const displayUserByEmail = async (req, res) => {
     try {
         const { email } = req.user;
         const findUser = await displayUser(email);
-        res.status(200).json([findUser]);
+        res.status(200).json(findUser);
     } catch (error) {
         console.log(error);
         const errorFound = errorFinder(error.code);

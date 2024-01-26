@@ -17,14 +17,10 @@ const Login = () => {
 
     const handleForm = (event) => {
         event.preventDefault();
-
         if (!user.email.trim() || !user.password.trim()) {
-            console.error("Email and password are required.");
             return window.alert("Email and password are required.");
         }
-
         if (!emailRegex.test(user.email)) {
-            console.error("Email format is not correct!");
             return window.alert("Email format is not correct!");
         }
 

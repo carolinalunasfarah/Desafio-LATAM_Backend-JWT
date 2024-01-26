@@ -10,10 +10,7 @@ export const verifyToken = async (req, res, next) => {
         req.user = tokenData;
         next();
     } catch (error) {
-        const errorFound = errorFinder(error.code);
-        return res
-            .status(errorFound[0]?.status)
-            .json({ error: errorFound[0]?.message });
+        throw new Error("Error verifying token: " + error.message);
     }
 };
 
