@@ -1,0 +1,48 @@
+
+Started OPTIONS /users for :: ::1 at Fri Jan 26 2024 10:12:56 GMT-0300 (hora de verano de Chile)
+  Parameters in body: {}
+Completed: 204 message:  Time response: 5 ms Request ID: [f0decbb3-d912-4a88-a8e9-4ad2bb4ba2d2]
+
+Started POST /users for :: ::1 at Fri Jan 26 2024 10:12:56 GMT-0300 (hora de verano de Chile)
+  Parameters in body: {"email":"test1@test.com","password":"123456","role":"Frontend Developer","lenguage":"JavaScript"}
+Completed: 201 message:  Time response: 155 ms Request ID: [30fd3489-d46a-45da-a227-12ee86204864]
+
+Started OPTIONS /login for :: ::1 at Fri Jan 26 2024 10:13:10 GMT-0300 (hora de verano de Chile)
+  Parameters in body: {}
+Completed: 204 message:  Time response: 7 ms Request ID: [f6cdc3d8-340e-462d-ae29-9befab73ac34]
+
+Started POST /login for :: ::1 at Fri Jan 26 2024 10:13:10 GMT-0300 (hora de verano de Chile)
+  Parameters in body: {"email":"test1@test.com","password":"123456"}
+Completed: 200 message:  Time response: 133 ms Request ID: [6859bda6-9858-4eda-8e8d-c5074cc4a80b]
+
+Started OPTIONS /users for :: ::1 at Fri Jan 26 2024 10:13:12 GMT-0300 (hora de verano de Chile)
+  Parameters in body: {}
+Completed: 204 message:  Time response: 4 ms Request ID: [951daf5b-c9ae-424e-9341-08803401df0e]
+
+Started OPTIONS /users for :: ::1 at Fri Jan 26 2024 10:13:12 GMT-0300 (hora de verano de Chile)
+  Parameters in body: {}
+Completed: 204 message:  Time response: 2 ms Request ID: [e728fb43-1b71-4086-9c34-a47210b8e89c]
+
+Started GET /users for :: ::1 at Fri Jan 26 2024 10:13:12 GMT-0300 (hora de verano de Chile)
+  Parameters in body: {}
+Completed: 200 message:  Time response: 8 ms Request ID: [a221d371-bb29-4d79-9048-2a02072548f9]
+
+Started GET /users for :: ::1 at Fri Jan 26 2024 10:13:12 GMT-0300 (hora de verano de Chile)
+  Parameters in body: {}
+Completed: 304 message:  Time response: 5 ms Request ID: [dc45eabb-b309-4695-bf45-396629afa116]
+
+Started GET /users for :: ::ffff:127.0.0.1 at Fri Jan 26 2024 10:19:29 GMT-0300 (hora de verano de Chile)
+  Parameters in body: {"email":"user3@user.com"}
+Started POST /login for :: ::ffff:127.0.0.1 at Fri Jan 26 2024 10:20:26 GMT-0300 (hora de verano de Chile)
+  Parameters in body: {"email":"test1@test.com","password":"123456"}
+Completed: 200 message:  Time response: 150 ms Request ID: [d4f2aea0-3f61-4cea-bb50-bf880d034748]
+
+Started GET /users for :: ::ffff:127.0.0.1 at Fri Jan 26 2024 10:20:37 GMT-0300 (hora de verano de Chile)
+  Parameters in body: {"email":"user3@user.com"}
+Started GET /users for :: ::ffff:127.0.0.1 at Fri Jan 26 2024 10:22:33 GMT-0300 (hora de verano de Chile)
+  Parameters in body: {"email":"user3@user.com"}
+Completed: 200 message:  Time response: 57 ms Request ID: [95f4462f-26a8-4aa2-86b7-a6ce0fdf73a8]
+
+Started GET /users for :: ::ffff:127.0.0.1 at Fri Jan 26 2024 10:22:37 GMT-0300 (hora de verano de Chile)
+  Parameters in body: {"email":"user3@user.com"}
+Completed: 200 message:  Time response: 4 ms Request ID: [a8318b93-7d94-494c-b85c-85b13dfd3309]
